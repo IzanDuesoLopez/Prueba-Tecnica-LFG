@@ -42,21 +42,7 @@ public class UserController {
 		return userId;
 	}
 	
-	// Update user (in this case only the steam username)
-	@PutMapping("/users/{id}")
-	public User updateSteamUsername(@PathVariable(name="id") int id, @RequestBody String steam_username) {
-		User user_selected= new User();
-		User user_updated= new User();
-		
-		user_selected= userServiceImpl.userById(id);
-		
-		user_selected.setSteam_username(steam_username);
-		
-		user_updated = userServiceImpl.updateUser(user_selected);
-		return user_updated;
-	}
-	
-	// Update user (in this case only the steam username)
+	// Update user, in this case, only the steam username
 	@PutMapping("/users/{id}")
 	public User updateUser(@PathVariable(name="id") int id, @RequestBody User user) {
 		User user_selected= new User();
