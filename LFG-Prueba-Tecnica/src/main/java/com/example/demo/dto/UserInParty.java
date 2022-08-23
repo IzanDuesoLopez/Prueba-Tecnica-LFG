@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,8 @@ public class UserInParty {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Column(name="message")
+	private String message;
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
@@ -82,6 +85,21 @@ public class UserInParty {
 	 */
 	public void setParty(Party party) {
 		this.party = party;
+	}
+
+	
+	/**
+	 * @return the message
+	 */
+	public String getMessage() {
+		return message;
+	}
+
+	/**
+	 * @param message the message to set
+	 */
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	@Override
