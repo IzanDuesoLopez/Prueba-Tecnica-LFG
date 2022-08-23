@@ -10,5 +10,4 @@ public interface IUserDAO extends JpaRepository<User, Integer>{
 	
 	// Search users by username
 	public List<User> findByUsername(String username);
-	public User editSteamUsername(String steam_username);
 }

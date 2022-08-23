@@ -19,6 +19,4 @@ public interface IUserService {
 	
 	public List<User> findUserByName(String username); // Find user by username
 	
-	public User editSteamUsername(String steam_username); // Edit steam username
-	
 }

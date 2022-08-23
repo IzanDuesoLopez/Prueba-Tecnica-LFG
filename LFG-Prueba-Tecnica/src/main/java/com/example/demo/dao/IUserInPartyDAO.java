@@ -8,7 +8,4 @@ import com.example.demo.dto.UserInParty;
 
 public interface IUserInPartyDAO extends JpaRepository<UserInParty, Integer>{
 	
-	public UserInParty sendMessage(String message);
-	public UserInParty deleteMessage(String message);
-	public UserInParty editMessage(String message);
 }

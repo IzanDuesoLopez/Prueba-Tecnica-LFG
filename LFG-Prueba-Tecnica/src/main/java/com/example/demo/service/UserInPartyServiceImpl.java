@@ -3,19 +3,16 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.IUserInPartyDAO;
 import com.example.demo.dto.UserInParty;
 
+@Service
 public class UserInPartyServiceImpl implements IUserInPartyService{
 
 	@Autowired
 	IUserInPartyDAO iUserInPartyDAO;
-	
-	@Override
-	public List<UserInParty> listMessages() {
-		return iUserInPartyDAO.findAll();
-	}
 
 	@Override
 	public UserInParty saveUserInParty(UserInParty userInParty) {
@@ -39,19 +36,8 @@ public class UserInPartyServiceImpl implements IUserInPartyService{
 	}
 
 	@Override
-	public UserInParty sendMessage(String message) {
-		return iUserInPartyDAO.sendMessage(message);
-	}
-
-	@Override
-	public UserInParty updateMessage(String message) {
-		return iUserInPartyDAO.editMessage(message);
-	}
-
-	@Override
-	public void deleteMessage(String message) {
-		iUserInPartyDAO.deleteMessage(message);
-		
+	public List<UserInParty> listUsersParties() {
+		return iUserInPartyDAO.findAll();
 	}
 
 }

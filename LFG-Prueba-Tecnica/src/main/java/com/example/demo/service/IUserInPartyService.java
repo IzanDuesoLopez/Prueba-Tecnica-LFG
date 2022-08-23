@@ -7,7 +7,7 @@ import com.example.demo.dto.UserInParty;
 public interface IUserInPartyService {
 
 	// Methods for userInParty CRUD
-	public List<UserInParty> listMessages(); // List al party messages
+	public List<UserInParty> listUsersParties(); // List al party messages
 	
 	public UserInParty saveUserInParty(UserInParty userInParty); // Save logs
 	
@@ -16,11 +16,5 @@ public interface IUserInPartyService {
 	public UserInParty updateUserInParty(UserInParty userInParty); // Update logs
 	
 	public void deleteUserInParty(int id); // Delete logs
-	
-	public UserInParty sendMessage(String message); // Send message to party
-	
-	public UserInParty updateMessage(String message); // Update message in party
-	
-	public void deleteMessage(String message); // Delete message by message content
 	
 }

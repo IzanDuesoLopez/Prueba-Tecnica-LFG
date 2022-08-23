@@ -3,10 +3,12 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.IGroupDAO;
 import com.example.demo.dto.Group;
 
+@Service
 public class GroupServiceImpl implements IGroupService{
 
 	@Autowired
@@ -40,7 +42,6 @@ public class GroupServiceImpl implements IGroupService{
 	@Override
 	public void deleteGroup(int id) {
 		iGroupDAO.deleteById(id);
-		
 	}
 
 }

@@ -3,10 +3,12 @@ package com.example.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.IUserDAO;
 import com.example.demo.dto.User;
 
+@Service
 public class UserServiceImpl implements IUserService{
 
 	@Autowired
@@ -41,11 +43,6 @@ public class UserServiceImpl implements IUserService{
 	@Override
 	public List<User> findUserByName(String username) {
 		return iUserDAO.findByUsername(username);
-	}
-
-	@Override
-	public User editSteamUsername(String steam_username) {
-		return iUserDAO.editSteamUsername(steam_username);
 	}
 
 }

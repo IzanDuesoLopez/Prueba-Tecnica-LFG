@@ -25,6 +25,7 @@ create table parties (
 
 create table users_in_parties (
 	id int auto_increment primary key,
+    message varchar(255),
     user_id int,
     party_id int,
     constraint user_fk_parties foreign key (user_id) references users (id)
@@ -45,8 +46,6 @@ insert into parties(members, messages)values(21, 421);
 insert into parties(members, messages)values(24, 730);
 insert into parties(members, messages)values(17, 355);
 
-insert into users_in_parties(user_id, party_id)values(1, 1);
-insert into users_in_parties(user_id, party_id)values(11, 11);
-insert into users_in_parties(user_id, party_id)values(21, 21);
-
-select * from users;
+insert into users_in_parties(message, user_id, party_id)values('¿Hola que tal?', 1, 1);
+insert into users_in_parties(message, user_id, party_id)values('¿Muy bien y tu?', 11, 11);
+insert into users_in_parties(message, user_id, party_id)values('¿Jugamos a algo?', 21, 21);
