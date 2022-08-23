@@ -21,7 +21,7 @@ public class GroupController {
 	GroupServiceImpl groupServiceImpl;
 	
 	// Show all groups
-	@GetMapping("groups")
+	@GetMapping("/groups")
 	public List<Group> listGroups(){
 		return groupServiceImpl.listGroups();
 	}
