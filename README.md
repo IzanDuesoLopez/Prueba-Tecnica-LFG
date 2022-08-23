@@ -23,3 +23,4 @@ DELETE /api/usersParties/{id}
 API USER: izan 
 API PASSWD: root 
 ```
+### LINK API: https://lfg-prueba-tecnica.herokuapp.com/
